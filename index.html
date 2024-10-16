@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SportWave - Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>SportWave</h1>
+        </div>
+        <nav>
+            <div class="menu-icon" id="menu-icon">&#9776;</div>
+            <ul id="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="cart.html">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-text">
+            <h2>Unleash Your Potential</h2>
+            <p>Your go-to place for high-quality sports equipment!</p>
+            <a href="shop.html" class="btn">Shop Now</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 SportWave. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript for burger menu
+        document.getElementById('menu-icon').onclick = function() {
+            var menu = document.getElementById('menu');
+            menu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

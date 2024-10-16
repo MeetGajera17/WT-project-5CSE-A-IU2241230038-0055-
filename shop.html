@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="sportWaveApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SportWave - Shop</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body ng-controller="mainController">
+    <header>
+        <h1>SportWave</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="cart.html">Cart</a></li> <!-- New Cart Button in Header -->
+            </ul>
+        </nav>
+    </header>
+
+    <section class="products">
+        <h2>Sports Equipment</h2>
+        <div class="product-list">
+            <div class="product" ng-repeat="product in products">
+                <h3>{{ product.name }}</h3>
+                <img ng-src="{{ product.image }}" alt="{{ product.name }}">
+                <p>{{ product.description }}</p>
+                <p><strong>${{ product.price }}</strong></p>
+                <button ng-click="addToCart(product)">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 SportWave. All rights reserved.</p>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
